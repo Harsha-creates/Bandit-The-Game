@@ -16,6 +16,8 @@ The password for the next level is stored in the file data.txt, where all lowerc
 
 define a shell function. Here’s how you can define a rot13 function: 
 
+![Screenshot from 2023-10-27 19-13-34](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/f58a372a-9115-4101-8479-8095cde80873)
+
 ![Screenshot from 2023-10-27 19-13-34](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/78230066-64b9-47da-8723-9ab2280b98b9)
 
 ***The password is JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv*** 
