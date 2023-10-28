@@ -18,8 +18,6 @@ define a shell function. Here’s how you can define a rot13 function:
 
 ![Screenshot from 2023-10-27 19-13-34](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/f58a372a-9115-4101-8479-8095cde80873)
 
-![Screenshot from 2023-10-27 19-13-34](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/78230066-64b9-47da-8723-9ab2280b98b9)
-
 ***The password is JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv*** 
 
 [SOURCE](https://devicetests.com/decode-rot13-text-command-line)
@@ -55,8 +53,8 @@ The password for the next level is stored in the file data.txt, which is a hexdu
 
 ``xxd -r data.txt nuke1``
 
- 
-![Screenshot from 2023-10-28 11-00-20](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/acd38d18-57cf-4af2-90d1-58703ee28049)
+ ![Screenshot from 2023-10-28 11-00-20](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/d65c7aa4-b1c6-42da-bef4-930e68fa3f14)
+
 
 ***The password is wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw***
 
@@ -98,7 +96,8 @@ Use `telnet` to connect localhost at port `30000`
 
 `telnet localhost 30000`
 
-![Screenshot from 2023-10-28 17-02-35](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/44c7d3f9-7b75-4817-823e-62b888c55cf8)
+![Screenshot from 2023-10-28 17-02-35](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/b8a20c1d-9c59-4fc1-9c1f-4491640eb783)
+
 
 ***Password is jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt***
 
@@ -120,7 +119,7 @@ Connect to localhost using`ssh` through `s_client` at port `30001`
 
 `openssl s_client -connect localhost:30001`
 
-![Screenshot from 2023-10-28 17-37-01](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/b360b3e0-646e-4277-b3ba-56438e23c16d)
+![Screenshot from 2023-10-28 17-37-01](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/84bafa51-6f48-4b72-8613-85f22b4f7bae)
 
 >Password is JQttfApK4SeyHwDlI9SXGR50qclOAil1
 
@@ -142,12 +141,11 @@ scan ports using `nmap` to know how to use nmap use command `nmap --help`
 
 `nmap localhost -p 31000-32000`
 
-![Screenshot from 2023-10-28 18-22-23](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/a61bd4bc-046b-452f-9076-c096f217afe0)
-
+![Screenshot from 2023-10-28 18-22-23](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/e37086fa-031f-4ba1-aa1f-53201fcd44ef)
 
 `nmap localhost -p 31046,31518,31691,31790,31960 -sV`
 
-![image](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/b728a48b-75f8-4d19-a562-0bf413d9a68f)
+![Screenshot from 2023-10-28 18-26-57](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/565fc6f5-997e-4cb6-a417-8e0e6dc98b24)
 
 Try both ports
 
@@ -155,7 +153,7 @@ Try both ports
 
 `openssl s_client -connect localhost:31790` give RSA Private key
 
-![image](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/323f7490-194e-4c0a-9d4e-d23afffe13af)
+![Screenshot from 2023-10-28 18-36-18](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/88b60c16-f7c6-4f1f-9887-1f655d88a32f)
 
 create a new directory in `/tmp/` 
 
@@ -187,7 +185,7 @@ To see the difference b/w two files use `diff` command
 
 `diff passwords.new passwords.old`
 
-![image](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/1346d858-74b9-48e1-9a4b-a4b26cee2ea2)
+![Screenshot from 2023-10-28 19-59-31](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/fa35a114-af8f-4055-9231-4afd60259562)
 
  ***Password is hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg***
 
@@ -204,7 +202,7 @@ In order retrieve the password use `cat` along with log in command
 
 `ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme`
 
-![image](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/75a3dfb7-29dc-4b4c-b23f-c8a9792efa7c)
+![Screenshot from 2023-10-28 20-11-46](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/608ffa93-d360-4661-8674-103caf7f6c3f)
 
 ***password: awhqfNnAbc1naukrpqDYcF95h7HoMTrC***
 
@@ -236,7 +234,7 @@ use `nc -l`
 
 `./suconnect 1239`
 
-![image](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/badba239-3da9-415f-a213-a78275745c55)
+![Screenshot from 2023-10-28 20-30-32](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/733923c6-c4c7-4b6b-b8d4-57714f3f5137)
 
 ***NvEJF7oVjkddltPSrdKEFOllh9V1IBcq***
 
@@ -256,7 +254,7 @@ A program is running automatically at regular intervals from cron, the time-base
 
 `cat /usr/bin/cronjob_bandit22.sh`
 
-![image](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/745ac82d-c288-4000-8f4f-3893e68e891f)
+![Screenshot from 2023-10-28 20-38-00](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/02aca5fd-8c8c-4554-9d45-6c4ef2182c5e)
 
 ***WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff***
 
