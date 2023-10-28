@@ -63,4 +63,97 @@ Level Goal
 
 The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.
 
+To get the current level password change the directory into `/etc/bandit_pass`
+
+`cd /etc/bandit_pass/`
+
+`cat bandit14`
+>fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+
+Use `telnet` to connect localhost at port `30000`
+
+`telnet localhost 30000`
+
+![Screenshot from 2023-10-28 17-02-35](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/44c7d3f9-7b75-4817-823e-62b888c55cf8)
+
+***Password is jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt***
+
+###Level 15 → Level 16
+
+Level Goal
+
+The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption.
+
+`ssh bandit15@bandit.labs.overthewire.org -p 2220`
+
+get the password of current level by using command 
+
+`cat /etc/bandit_pass/bandit15`
+
+>jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+
+Connect to localhost using`ssh` through `s_client` at port `30001`
+
+`openssl s_client -connect localhost:30001`
+
+![Screenshot from 2023-10-28 17-37-01](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/b360b3e0-646e-4277-b3ba-56438e23c16d)
+
+>Password is JQttfApK4SeyHwDlI9SXGR50qclOAil1
+
+[Source](https://www.openssl.org/docs/man1.0.2/man1/openssl-s_client.html)
+
+###Level 16 → Level 17
+
+Level Goal
+
+The credentials for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000. First find out which of these ports have a server listening on them. Then find out which of those speak SSL and which don’t. There is only 1 server that will give the next credentials, the others will simply send back to you whatever you send to it.
+
+get the password of current level by using command 
+
+`cat /etc/bandit_pass/bandit16`
+
+>JQttfApK4SeyHwDlI9SXGR50qclOAil1
+
+scan ports using `nmap` to know how to use nmap use command `nmap --help`
+
+`nmap localhost -p 31000-32000`
+
+![Screenshot from 2023-10-28 18-22-23](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/a61bd4bc-046b-452f-9076-c096f217afe0)
+
+
+`nmap localhost -p 31046,31518,31691,31790,31960 -sV`
+
+![image](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/b728a48b-75f8-4d19-a562-0bf413d9a68f)
+
+Try both ports
+
+`openssl s_client -connect localhost:31518` doesn't give the password
+
+`openssl s_client -connect localhost:31790` give RSA Private key
+
+![image](https://github.com/Harsha-creates/Bandit-The-Game/assets/68886253/323f7490-194e-4c0a-9d4e-d23afffe13af)
+
+create a new directory in `/tmp/` 
+
+`mkdir /tmp/nuke`
+
+Store RSA key in a file using `nano`
+
+`nano wood`
+
+check permissions of RSA file using `ls -la`
+
+change the perrmission to private usng command `chmod 600 wood`
+
+
+
+
+
+
+
+
+
+
+
+
 
